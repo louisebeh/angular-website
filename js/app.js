@@ -43,5 +43,8 @@ var app = angular.module('example359', []).
         $scope.process = false;
       });
     };
-
   }]);
+
+app.config(['$locationProvider', function($location) {
+    $location.hashPrefix('!');
+}]);
