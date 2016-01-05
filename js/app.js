@@ -26,6 +26,12 @@ var app = angular.module('example359', []).
       $scope.part = $route.current.activetab;
     });
 
+    // onclick event handlers
+    $scope.showForm = function () {
+      $('.contactRow').slideToggle();
+    };
+    $scope.closeForm = function () {
+      $('.contactRow').slideUp();
+    };
+
   }]);
-
-
