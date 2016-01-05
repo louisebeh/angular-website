@@ -34,4 +34,14 @@ var app = angular.module('example359', []).
       $('.contactRow').slideUp();
     };
 
+    // save the 'Contact Us' form
+    $scope.save = function () {
+      $scope.loaded = true;
+      $scope.process = true;
+      $http.post('sendemail.php', $scope.message).success(function () {
+        $scope.success = true;
+        $scope.process = false;
+      });
+    };
+
   }]);
